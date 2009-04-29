@@ -6,3 +6,6 @@
 
 # Compiled translationfiles
 *.mo
+
+# Our databases
+*.sqlite3
