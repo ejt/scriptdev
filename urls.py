@@ -14,3 +14,13 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     (r'^admin/(.*)', admin.site.root),
 )
+
+import os
+from django.conf import settings
+
+if settings.DEBUG:
+    urlpatterns += patterns('',
+        (r'^media/(.*)$', 'django.views.static.serve', {
+            'document_root': os.path.join(settings.PROJECT_PATH, 'media'),
+        }),
+    )
