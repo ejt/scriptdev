@@ -1,0 +1,8 @@
+# Vim backup files
+*~
+
+# Compiled python code
+*.pyc
+
+# Compiled translationfiles
+*.mo
