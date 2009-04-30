@@ -7,12 +7,11 @@ urlpatterns = patterns('',
     # Example:
     # (r'^scriptdev/', include('scriptdev.foo.urls')),
 
-    # Uncomment the admin/doc line below and add 'django.contrib.admindocs' 
-    # to INSTALLED_APPS to enable admin documentation:
-    # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
-
-    # Uncomment the next line to enable the admin:
+    # Django Admin
     (r'^admin/(.*)', admin.site.root),
+    
+    # Login
+    (r'^login/$', 'django.contrib.auth.views.login'),
 )
 
 import os
