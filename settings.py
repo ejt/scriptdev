@@ -78,4 +78,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.admin',
     'scriptdev.projects',
+    'profiles',
 )
+
+AUTH_PROFILE_MODULE = 'profiles.profile'
