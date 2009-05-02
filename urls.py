@@ -12,6 +12,11 @@ urlpatterns = patterns('',
     
     # Login
     (r'^login/$', 'django.contrib.auth.views.login'),
+
+    # For testing purposes, replace with a proper view!
+    (r'^$', 'django.views.generic.simple.direct_to_template', {
+        'template': 'index.html'
+    }),
 )
 
 import os
