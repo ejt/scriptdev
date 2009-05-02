@@ -69,21 +69,14 @@
                     </ul>
 
                     <ul id="developers">
+                        {% load gravatar_tags %}
+                        {% for user in user_list %}
                         <li>
-                            <img src="" alt=""/>
-                            <h3>Johan “Louie”</h3>
-                            <p>Programmerare</p>
+                            <img src="{% get_gravatar_for_email user.email 42 %}" alt="Användarbild för {{ user.username }}"/>
+                            <h3>{{ user.first_name }} “{{ user.username }}”</h3>
+                            <p>{{ user.get_profile.roles }}</p>
                         </li>
-                        <li>
-                            <img src="" alt=""/>
-                            <h3>Marcus “DrMegahertz”</h3>
-                            <p>Programmerare, Webbdesigner</p>
-                        </li>
-                        <li>
-                            <img src="" alt=""/>
-                            <h3>Niklas “Nikke”</h3>
-                            <p>Fixare</p>
-                        </li>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
