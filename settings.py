@@ -89,6 +89,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'scriptdev.projects',
     'profiles',
+    'gravatar',
 )
 
 AUTH_PROFILE_MODULE = 'profiles.profile'
