@@ -1,5 +1,15 @@
 import os
 
+# Absolute path to the directory where this file is located, use;
+#
+#     from django.conf import settings
+#     some_path = os.path.join(settings.PROJECT_PATH, 'subdir/')
+#
+# Instead of eg;
+#
+#     some_path = '/home/django/project/subdir/'
+#
+# To keep the project portable.
 PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
 
 DEBUG = True
