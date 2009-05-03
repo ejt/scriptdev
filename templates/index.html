@@ -70,7 +70,7 @@
                         {% load gravatar_tags %}
                         {% for user in user_list %}
                         <li>
-                            <img src="{% get_gravatar_for_email user.email 42 %}" alt="Användarbild för {{ user.username }}"/>
+                            <img src="{% get_gravatar_for_email user.email 42 %}" alt="Användarbild för {{ user.username }}" height="42" width="42" />
                             <h3>
                                 {% if user.first_name %}
                                     {{ user.first_name }} “{{ user.username }}”
