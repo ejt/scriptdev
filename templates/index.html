@@ -26,15 +26,21 @@
             <div id="panel">
                 <div id="panelcontent">
                     <div class="wrap">
-                        <form action="." method="post">
+                        {% if user.is_authenticated %}
+                        <p>Välkommen {{ user.first_name }}! <a href="/admin/">Administrationspanel</a> | <a href="/logout/">Logga ut</a></p>
+                        {% else %}
+                        <form action="/login/" method="post">
                             <label for="username">Användarnamn:</label>
-                            <input id="username" type="text" />
+                            <input name="username" type="text" />
 
                             <label for="password">Lösenord:</label>
-                            <input id="password" type="password" />
+                            <input name="password" type="password" />
+
+                            <input type="hidden" name="next" value="/" />
 
                             <input type="submit" value="Logga in" />
                         </form>
+                        {% endif %}
                     </div>
                 </div>
                 <div id="tab">

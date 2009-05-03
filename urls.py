@@ -4,17 +4,19 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Example:
-    # (r'^scriptdev/', include('scriptdev.foo.urls')),
-
-    # Django Admin
-    (r'^admin/(.*)', admin.site.root),
-    
-    # Login
-    (r'^login/$', 'django.contrib.auth.views.login'),
-
     # Index
     (r'^$', 'views.index'),
+
+    # Log in / Log out
+    (r'^login/$', 'django.contrib.auth.views.login', {
+        'template_name': 'index.html'
+    }),
+    (r'^logout/$', 'django.contrib.auth.views.logout', {
+        'next_page': '/',
+    }),
+
+    # Admin
+    (r'^admin/(.*)', admin.site.root),
 )
 
 import os
