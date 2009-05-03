@@ -27,7 +27,7 @@
                 <div id="panelcontent">
                     <div class="wrap">
                         {% if user.is_authenticated %}
-                        <p>Välkommen {{ user.first_name }}! <a href="/admin/">Administrationspanel</a> | <a href="/logout/">Logga ut</a></p>
+                        <p>Välkommen {{ user.first_name|default:user.username }}! <a href="/admin/">Administrationspanel</a> | <a href="/logout/">Logga ut</a></p>
                         {% else %}
                         <form action="/login/" method="post">
                             <label for="username">Användarnamn:</label>
@@ -71,7 +71,13 @@
                         {% for user in user_list %}
                         <li>
                             <img src="{% get_gravatar_for_email user.email 42 %}" alt="Användarbild för {{ user.username }}"/>
-                            <h3>{{ user.first_name }} “{{ user.username }}”</h3>
+                            <h3>
+                                {% if user.first_name %}
+                                    {{ user.first_name }} “{{ user.username }}”
+                                {% else %}
+                                    {{ user.username }}
+                                {% endif %}
+                            </h3>
                             <p>{{ user.get_profile.roles }}</p>
                         </li>
                         {% endfor %}
