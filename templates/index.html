@@ -18,8 +18,8 @@
             <div id="access">
                 <div class="wrap">
                     <ul>
-                        <li><a href="#projects">Skip to project list</a></li>
-                        <li><a href="#developers">Skip to developer list</a></li>
+                        <li><a href="#projects">Gå till projektlista</a></li>
+                        <li><a href="#developers">Gå till utvecklarlista</a></li>
                     </ul>
                 </div>
             </div>
@@ -87,7 +87,7 @@
             <div id="footer">
                 <div class="wrap">
                     <div class="column">
-                        <h4>Projects</h4>
+                        <h4>Projekt</h4>
                         <ul>
                             {% for project in project_list %}
                             <li><a href="{{ project.url }}">{{ project.name }}<span>{{ project.description }}</span></a></li>
@@ -95,22 +95,22 @@
                         </ul>
                     </div>
                     <div class="column">
-                        <h4>Contact</h4>
+                        <h4>Kontakta oss</h4>
                         <form action="." method="post">
-                            <label for="name">Name:</label>
+                            <label for="name">Namn:</label>
                             <input id="name" type="text" />
 
-                            <label for="email">Email:</label>
+                            <label for="email">Epost:</label>
                             <input id="email" type="text" />
 
-                            <label for="message">Message:</label>
+                            <label for="message">Meddelande:</label>
                             <textarea id="message"></textarea>
 
                             <input type="submit" value="Send" />
                         </form>
                     </div>
                     <div class="column">
-                        <h4>About</h4>
+                        <h4>Vad är detta?</h4>
                         <p>There are many variations of passages of Lorem Ipsum
                         available, but the majority have suffered alteration in
                         some form, by injected humour, or randomised words
