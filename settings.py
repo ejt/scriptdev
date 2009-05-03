@@ -91,6 +91,7 @@ INSTALLED_APPS = (
     'scriptdev.projects',
     'profiles',
     'gravatar',
+    'contact_form',
 )
 
 AUTH_PROFILE_MODULE = 'profiles.profile'
