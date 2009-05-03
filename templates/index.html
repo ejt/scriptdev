@@ -59,7 +59,7 @@
                     <ul id="projects">
                         {% for project in project_list %}
                         <li>
-                            <img src="/media/img/codenotes.png" alt=""/>
+                            <img src="{{ project.img }}" alt="" width="287px" height="200px"/>
                             <h2><a href="{{ project.url }}">{{ project.name }}</a></h2>
                             <p>{{ project.description }}</p>
                         </li>
