@@ -51,21 +51,13 @@
             <div id="content">
                 <div class="wrap">
                     <ul id="projects">
+                        {% for project in project_list %}
                         <li>
                             <img src="/media/img/codenotes.png" alt=""/>
-                            <h2><a href="#">Codenotes</a></h2>
-                            <p>Djangodriven pastebin</p>
+                            <h2><a href="{{ project.url }}">{{ project.name }}</a></h2>
+                            <p>{{ project.description }}</p>
                         </li>
-                        <li>
-                            <img src="" alt=""/>
-                            <h2><a href="#">Codearchive</a></h2>
-                            <p>Lagra ditt arbete online</p>
-                        </li>
-                        <li>
-                            <img src="/media/img/servermonitor.png" alt=""/>
-                            <h2><a href="#">Servermonitor</a></h2>
-                            <p>Serverövervakning</p>
-                        </li>
+                        {% endfor %}
                     </ul>
 
                     <ul id="developers">
