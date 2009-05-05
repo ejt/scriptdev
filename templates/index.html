@@ -29,14 +29,12 @@
                         {% if user.is_authenticated %}
                         <p>Välkommen {{ user.first_name|default:user.username }}! <a href="/admin/">Administrationspanel</a> | <a href="/logout/">Logga ut</a></p>
                         {% else %}
-                        <form action="/login/" method="post">
-                            <label for="username">Användarnamn:</label>
-                            <input name="username" type="text" />
+                        <form action="." method="post">
+                            {{ auth_form.username.label }}
+                            {{ auth_form.username }}
 
-                            <label for="password">Lösenord:</label>
-                            <input name="password" type="password" />
-
-                            <input type="hidden" name="next" value="/" />
+                            {{ auth_form.password.label }}
+                            {{ auth_form.password }}
 
                             <input type="submit" value="Logga in" />
                         </form>
@@ -97,16 +95,16 @@
                     <div class="column">
                         <h4>Kontakta oss</h4>
                         <form action="." method="post">
-                            <label for="name">Namn:</label>
-                            <input id="name" type="text" />
+                            {{ contact_form.name.label }}
+                            {{ contact_form.name }}
 
-                            <label for="email">Epost:</label>
-                            <input id="email" type="text" />
+                            {{ contact_form.email.label }}
+                            {{ contact_form.email }}
 
-                            <label for="message">Meddelande:</label>
-                            <textarea id="message"></textarea>
+                            {{ contact_form.body.label }}
+                            {{ contact_form.body }}
 
-                            <input type="submit" value="Send" />
+                            <input type="submit" value="Sänd" />
                         </form>
                     </div>
                     <div class="column">
