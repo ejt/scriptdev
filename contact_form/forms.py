@@ -139,12 +139,12 @@ class ContactForm(forms.Form):
     
     name = forms.CharField(max_length=100,
                            widget=forms.TextInput(attrs=attrs_dict),
-                           label=u'Your name')
+                           label=u'Ditt namn')
     email = forms.EmailField(widget=forms.TextInput(attrs=dict(attrs_dict,
                                                                maxlength=200)),
-                             label=u'Your email address')
+                             label=u'Din email adress')
     body = forms.CharField(widget=forms.Textarea(attrs=attrs_dict),
-                              label=u'Your message')
+                              label=u'Ditt meddelande')
     
     from_email = settings.DEFAULT_FROM_EMAIL
     
