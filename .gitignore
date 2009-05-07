@@ -10,3 +10,6 @@
 
 # Our databases
 *.sqlite3
+
+# Uploaded project images
+media/img/projects/*
