@@ -93,14 +93,14 @@ input:focus, textarea:focus {
     width: 100%;
 }
 
-#footer a {
+#footer li a {
     color: #444;
     display: block;
     font-weight: bold;
     padding: 0.5em 0;
 }
 
-#footer a span {
+#footer li a span {
     color: #888;
     display: block;
     font-weight: normal;
