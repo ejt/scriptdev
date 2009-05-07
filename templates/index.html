@@ -30,13 +30,15 @@
                         <p>Välkommen {{ user.first_name|default:user.username }}! <a href="/admin/">Administrationspanel</a> | <a href="/logout/">Logga ut</a></p>
                         {% else %}
                         <form action="." method="post">
-                            {{ auth_form.username.label }}
-                            {{ auth_form.username }}
+                            <fieldset>
+                                <label for="id_username">{{ auth_form.username.label }}</label>
+                                {{ auth_form.username }}
 
-                            {{ auth_form.password.label }}
-                            {{ auth_form.password }}
+                                <label for ="id_password">{{ auth_form.password.label }}</label>
+                                {{ auth_form.password }}
 
-                            <input type="submit" value="Logga in" />
+                                <input type="submit" value="Logga in" />
+                            </fieldset>
                         </form>
                         {% endif %}
                     </div>
@@ -79,7 +81,7 @@
                             <p>{{ user.get_profile.roles }}</p>
                         </li>
                         {% endfor %}
-                    </div>
+                    </ul>
                 </div>
             </div>
             <div id="footer">
@@ -95,16 +97,18 @@
                     <div class="column">
                         <h4>Kontakta oss</h4>
                         <form action="." method="post">
-                            {{ contact_form.name.label }}
-                            {{ contact_form.name }}
+                            <fieldset>
+                                <label for="id_name">{{ contact_form.name.label }}</label>
+                                {{ contact_form.name }}
 
-                            {{ contact_form.email.label }}
-                            {{ contact_form.email }}
+                                <label for="id_email">{{ contact_form.email.label }}</label>
+                                {{ contact_form.email }}
 
-                            {{ contact_form.body.label }}
-                            {{ contact_form.body }}
+                                <label for="id_body">{{ contact_form.body.label }}</label>
+                                {{ contact_form.body }}
 
-                            <input type="submit" value="Sänd" />
+                                <input type="submit" value="Sänd" />
+                            </fieldset>
                         </form>
                     </div>
                     <div class="column">
