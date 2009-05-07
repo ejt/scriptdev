@@ -1,1 +1,1 @@
-ScriptDev kontaktformulär, meddelande från {{ name }}
+[ScriptDev] “{{ name }}” <{{ email }}> skrev;

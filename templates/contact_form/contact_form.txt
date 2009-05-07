@@ -1,1 +1,3 @@
-{{ message }}
+{{ body }}
+
+Skrevs den {% now "j F Y" %}, klockan {% now "H:i" %}, av “{{ name }}” <{{ email }}>.
