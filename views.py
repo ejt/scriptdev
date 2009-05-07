@@ -4,7 +4,7 @@ from django.contrib.auth import login
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.models import User
 from projects.models import Project
-from contact_form.forms import ContactForm
+from contact_form.forms import AkismetContactForm
 
 def index(request):
     if request.method == "POST":
@@ -18,13 +18,13 @@ def index(request):
                 login(request, user)
 
         # Contact form handling
-        contact_form = ContactForm(request = request, data = request.POST)
+        contact_form = AkismetContactForm(request = request, data = request.POST)
 
         if contact_form.is_valid():
             contact_form.save()
     else:
         auth_form = AuthenticationForm()
-        contact_form = ContactForm(request = request)
+        contact_form = AkismetContactForm(request = request)
 
     return render_to_response('index.html',{
         'auth_form': auth_form,
