@@ -30,5 +30,5 @@ def index(request):
         'auth_form': auth_form,
         'contact_form': contact_form,
         'project_list': Project.objects.all(),
-        'user_list': User.objects.all()
+        'user_list': User.objects.all().order_by('first_name')
     }, context_instance = RequestContext(request))
