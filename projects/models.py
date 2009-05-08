@@ -13,6 +13,9 @@ class Project(models.Model):
     description = models.CharField(max_length=30, help_text='Just a few words about the project.')
     url = models.URLField(verify_exists=False, help_text='example: http://site.scriptdev.se')
     image = models.ForeignKey(Image)
+    sort = models.PositiveIntegerField(help_text='Ordering 1 = top 777 = very low')
+    class Meta:
+        ordering = ['sort']
 
     def __unicode__(self):
         return self.name
