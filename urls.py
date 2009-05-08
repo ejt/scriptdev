@@ -5,7 +5,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Index
-    (r'^$', 'views.index'),
+    (r'^$', 'scriptdev.views.index'),
 
     # Log in / Log out
     (r'^login/$', 'django.contrib.auth.views.login', {

@@ -91,9 +91,9 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.admin',
     'scriptdev.projects',
-    'profiles',
-    'gravatar',
-    'contact_form',
+    'scriptdev.profiles',
+    'scriptdev.gravatar',
+    'scriptdev.contact_form',
 )
 
 AUTH_PROFILE_MODULE = 'profiles.profile'
