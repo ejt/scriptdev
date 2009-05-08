@@ -39,6 +39,7 @@ input, textarea {
     color: #444;
     padding: 0.25em;
     -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
 }
 
 input:focus, textarea:focus {
@@ -52,7 +53,7 @@ input:focus, textarea:focus {
 #content {
     background: #eee url('/media/img/gradient.png') repeat-x;
     border-bottom: 1px solid #FFF;
-    border-top: 1px solid #666;
+    border-top: 1px solid #0b72a2;
     float: left;
     padding: 20px 0;
     width: 100%;
@@ -129,9 +130,8 @@ input:focus, textarea:focus {
 
 #header {
     background: #0f9ae0;
-    border-bottom: 1px solid #4CAFE0;
+    border-bottom: 1px solid #17cef0;
     /*height: 300px;*/
-    padding: 10px 0 0 0;
 }
 
 #header .wrap {
@@ -188,9 +188,10 @@ input:focus, textarea:focus {
 }
 
 #tab {
-    border-top: 5px solid #444;
+    background: transparent url('/media/img/panel-border.gif') repeat-x;
     color: #FFF;
     font-weight: bold;
+    padding: 8px 0 0 0;
     position: relative;
 }
 
@@ -202,6 +203,8 @@ input:focus, textarea:focus {
     top: 0.4em;
     -moz-border-radius-bottomleft: 10px;
     -moz-border-radius-bottomright: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
 }
 
 #tab .wrap {
